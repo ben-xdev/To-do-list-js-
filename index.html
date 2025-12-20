@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="project3.css">
+    <title>To do list</title>
+</head>
+<body>
+    <div class="container">
+       
+
+        <div class="to_do_box">
+            <marquee behavior="scroll" direction="right">📝</marquee>
+            <div class="heading"><h3>To do list 📒</h3></div>
+            <div class="input_box">
+                <input type="text" class="text-input" placeholder="New task...">
+                <button type="button">add</button>
+                
+            </div>
+        
+            <ul>
+            </ul>
+         
+            <!-- <div class="parent">
+                <input type="password" class="the_one">
+                <button id="show"> <i class="fa-solid fa-eye"></i></button>
+            </div> -->
+         
+        </div>
+    </div>
+    <script src="project3.js"></script>
+    <script>
+        var watch = document.querySelector("#show");
+        var text_line = document.querySelector(".the_one");
+    watch.addEventListener("click",function(){
+        
+        if(text_line.type === "password" ){
+        text_line.type = "text";
+        watch.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+        }
+        else{
+            text_line.type = "password"
+            watch.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+        }
+    });
+    </script>
+   
+</body>
+</html>
